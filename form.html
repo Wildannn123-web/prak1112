@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="container-sm">
+        <h5 class="mt-3">BOOTSTRAP</h5><hr>
+    </div>
+
+
+    <div class="container-sm text-center pt-3 pb-3">
+        <h2>Contoh Formulir Pemesanan Barang</h2>
+        <p>Berikut ini adalah contoh formulir pemesanan barang yang dibuat
+            dengan beberapa komponen form Bootstrap. <br>Setiap komponen membutuhkan
+            validasi agar formulir online ini bisa disubmit tanpa terjadi salah
+            input.</p>
+
+        <a href="index.html" class="btn btn-primary btn-sm rounded-pill" role="button" 
+        target="_self">Kembali ke Tabel Sebelumnya</a>
+    </div>
+    
+        <div class="container-sm pt-3">
+            <div class="row col-sm-12">
+
+            <div class="col-sm-8 pt-3">
+                <div class="card border-0">
+                <div class="col">
+                    <form class="needs-validation" novalidate id="orderForm">
+                            <h4>Alamat Billing</h4>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="namad" class="form-label">Nama Depan</label>
+                                    <input type="text" class="form-control" aria-label="First name" id="namad" required>
+                                    <div class="invalid-feedback">Nama Depan Harus Di isi!</div>
+                                </div>
+                                <div class="col">
+                                    <label for="namab" class="form-label">Nama Belakang</label>
+                                    <input type="text" class="form-control" aria-label="Last name" id="nama" required>
+                                    <div class="invalid-feedback">Nama Belakang Harus di isi</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="usern" class="form-label">Username</label>
+                                <div class="input-group input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <input type="text" class="form-control" placeholder="Username" 
+                                    aria-label="Username" aria-describedby="basic-addon1" id="usern" required>
+                                    <div class="invalid-feedback">Username Harus di isi!</div>
+                                </div>
+                            </div>
+                            <div class="col mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email 
+                                <span class="text-body-secondary">(optional)</span></label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" 
+                                placeholder="contoh@emailku.com">
+                            </div>
+                            <div class="col mb-3">
+                                <label for="inputAddress" class="form-label">Alamat</label>
+                                <input type="text" class="form-control" id="inputAddress" 
+                                placeholder="Contoh: Perumahan Pondok Permai B4" required>
+                                <div class="invalid-feedback">Alamat Harus Di isi</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <label for="kota" class="form-label">Kota/Kabupaten</label>
+                                    <select class="form-select" id="kota" aria-label="Default select example" required>
+                                    <option selected disabled value="">Pilih...</option>
+                                    <option value="1">Sleman</option>
+                                    <option value="2">Yogyakarta</option>
+                                    <option value="3">Bantul</option></select>
+                                    <div class="invalid-feedback">Pilih kota/Kabupaten yang sesuai.</div>
+                                </div>
+                                <div class="col-3 mb-3">
+                                    <label for="prov" class="form-label">Provinsi</label>
+                                    <select class="form-select" id="prov" aria-label="Default select example" required>
+                                    <option selected disabled>Pilih...</option>
+                                    <option value="1">D.I.Y.</option>
+                                    <option value="2">Jawa Tengah</option>
+                                    <option value="3">Sumatera Utara</option></select>
+                                    <div class="invalid-feedback">Pilih kota/Kabupaten yang sesuai.</div>
+                                </div>
+                                <div class="col-3 mb-3">
+                                    <label for="kode" class="form-label">Kode Pos</label>
+                                    <input type="text" name="kodepos" id="kode" class="form-control" required>
+                                    <div class="invalid-feedback">Kode Pos Harus Di isi.</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="cekalamat" >
+                                    <label class="form-check-label" for="cekalamat">
+                                        Alamat pengiriman sama dengan alamat billing</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="simpaninfo">
+                                    <label class="form-check-label" for="simpaninfo">
+                                        Simpan informasi ini untuk selanjutnya</label>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="mb-3">
+                                <h4>Pembayaran</h4>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked  >
+                                    <label class="form-check-label" for="flexRadioDefault1">Kartu Kredit</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"   >
+                                    <label class="form-check-label" for="flexRadioDefault2">Kartu Debit</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3"  >
+                                    <label class="form-check-label" for="flexRadioDefault3">Virtual Pay pal</label>
+                                </div>
+                                <div class="invalid-feedback">Pilih Pembayaran anda Anda</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="Pemilik" class="form-label">Nama Pemilik Kartu</label>
+                                    <input type="text" name="Pemilik" id="Pemilik" class="form-control" required>
+                                    <p class="form-text"><small>Masukkan nama lengkap yang tertera pada kartu.</small></p>
+                                    <div class="invalid-feedback">Nama Lengkap harus seusai</div>
+                                </div>
+                                <div class="col-6">
+                                    <label for="kartukredit" class="form-label">Nomor Kartu</label>
+                                    <input type="text" name="kartukredit" id="kartukredit" class="form-control"  required >
+                                    <div class="invalid-feedback">Nomor Kartu wajib di isi.</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 mb-3">
+                                    <label for="masa" class="form-label">Masa kadaluarsa</label>
+                                    <input type="text" name="masa" id="masa" class="form-control" required/>
+                                    <div class="invalid-feedback">Masa Kadaluarsa wajib diisi.</div>
+                                </div>
+                                <div class="col-3 mb-3">
+                                    <label for="cvv" class="form-label">Kode CVV</label>
+                                    <input type="text" name="cvv" id="cvv" class="form-control" required/>
+                                    <div class="invalid-feedback">kode CCV wajib di isi</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="mb-3 pt-3">
+                                <input type="submit" value="Proses Pembayaran" class="btn btn-primary col-12">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-sm-4 pt-3">
+                <div class="card border-0">
+                    <div class="col">
+                        <ol class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-start  border-0">
+                                <div class="me-auto">
+                                    <div class="fw-bold"><a href="#" class="text-decoration-none">
+                                        <h4>Keranjang Belanja</h4></a>
+                                    </div>
+                                </div>
+                                <span class="badge text-bg-primary rounded-pill">3</span>
+                            </li>
+                        </ol>
+                        <ol class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        Kopi Arabika Gayo
+                                    </div>
+                                    <div class="text-body-secondary">
+                                        <small>Biji kopi 200 gram.</small>
+                                    </div>
+                                </div>
+                                <span class="badge text-body-secondary">
+                                    Rp. 120.000
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        Kopi Arabika Flores Bajawa
+                                    </div>
+                                    <div class="text-body-secondary">
+                                        <small>Biji kopi 200 gram.</small>
+                                    </div>
+                                </div>
+                                <span class="badge text-body-secondary">
+                                    Rp. 130.000
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">
+                                        Kopi Arabika Gunung Halu
+                                    </div>
+                                    <div class="text-body-secondary">
+                                        <small>Biji kopi 200 gram.</small>
+                                    </div>
+                                </div>
+                                <span class="badge text-body-secondary">
+                                    Rp. 125.000
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between 
+                            align-items-start list-group-item-light">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold" style="color: green;">
+                                        Kode Promo
+                                    </div>
+                                    <div style="color: green;">
+                                        KUPONKOPI
+                                    </div> 
+                                </div>
+                                <span class="badge text-body-secondary">
+                                    <div style="color: green;">
+                                        - Rp. 75.000
+                                    </div>
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    Total
+                                </div>
+                                <span class="badge">
+                                    <div style="color: black;"><b>Rp. 300.000</b></div>
+                                </span>
+                            </li>
+                        </ol>
+                        <ol class="list-group pt-2">
+                            <li class="list-group-item">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Promo code">
+                                    <button class="btn btn-outline-secondary bg-body-secondary" 
+                                    type="button" id="button-addon2">
+                                        Reedem
+                                    </button>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container-sm pt-5">
+          <p><small>&copy; 2023 Praktikum 11 - Pengenalan Perancangan Web | 
+            Wildan Fahri Adi Kusuma | 23.12.2806</small></p>  
+        </div>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
